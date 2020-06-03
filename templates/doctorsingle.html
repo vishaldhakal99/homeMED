@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container mt-4 pt-2">
+    <div class="card text-center">
+        <div class="card-header">Profile</div>
+        <div class="card-body">
+            <h5 class="card-title">{{doctor.user.username}}</h5>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam eu sem tempor, varius quam at, luctus dui. Mauris magna metus, dapibus nec turpis vel, semper malesuada ante.</p>
+            <p class="lead">
+                <strong>
+                    <b>
+                       Today's Appontment Timing (Availability)
+                    </b>
+                </strong>
+            </p>
+            <table class="table table-dark">
+                <thead>
+                  <tr>
+                    <th scope="col">S.N</th>
+                    <th scope="col">From</th>
+                    <th scope="col">To</th>
+                    <th scope="col">Appoint</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">1</th>
+                    <td>4:00 PM</td>
+                    <td>5:00 PM</td>
+                    <td>
+                        <a href="" class="btn btn-outline-success">Appoint</a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

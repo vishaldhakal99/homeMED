@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container mt-4 pt-2">
+    {% for doctor in doctors %}
+    <div class="row bg-light p-3 mb-2">
+        <div class="col-sm-4 mb-2">Name :  {{doctor.user.username}} </div>
+        <div class="col-sm-4 mb-2">Specialization : </div>
+        <div class="col-sm-4 mb-2">
+            <button class="btn btn-outline-dark bt">
+                <a href="{% url 'doctorsingle' doctor.id %}" class="mynav">
+                    Know More
+                </a>
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

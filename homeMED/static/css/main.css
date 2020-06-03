@@ -1,0 +1,11 @@
+.hidden{
+    display: none;
+}
+
+.mynav{
+    text-decoration: none;
+    color: green;
+}
+.bt:hover .mynav{
+    color: white;
+}

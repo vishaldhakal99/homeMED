@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    {% for appo in appointments %}
+        <h1>{{appo.doctor.user.username}}</h1>
+        <h1>{{appo.date}}</h1>
+    {% endfor %}
+</div>
+{% endblock %}

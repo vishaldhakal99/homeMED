@@ -1,0 +1,90 @@
+{%  extends 'base.html' %}
+{% load static %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 mt-4 pt-4">
+            <p class="lead">
+                <strong>
+                    <b>
+                        <button class="btn btn-outline-success" id="signIn">
+                            Sign In
+                        </button>
+                        <button class="btn btn-outline-success ml-2" id="signUp">
+                            Sign Up
+                        </button>
+                    </b>
+                </strong>
+            </p>
+            <form class="mt-4 pt-4" id="signInForm" method="POST" action="{% url 'login' %}">
+                {% csrf_token %}
+                <p>
+                    <b>
+                        <strong>
+                            Sign In Here!
+                        </strong>
+                    </b>
+                </p>
+                <hr>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" placeholder="Enter Username" name="username">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+                </div>
+                <button type="submit" class="btn btn-success">Sign In</button>
+            </form>
+            <form class="mt-4 pt-4 hidden" id="signUpForm" method="POST" action="{% url 'register' %}">
+                {% csrf_token %}
+                <p>
+                    <b>
+                        <strong>
+                            Sign Up Here!
+                        </strong>
+                    </b>
+                </p>
+                <hr>
+                <div class="form-group">
+                    <label for="first_name">First Name</label>
+                    <input type="text" class="form-control" placeholder="Enter First Name" name="first_name">
+                </div>
+                <div class="form-group">
+                    <label for="first_name">Last Name</label>
+                    <input type="text" class="form-control" placeholder="Enter Last Name" name="last_name">
+                </div>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" placeholder="Enter Username" name="username">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email" name="email">
+                  <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputPassword1">Confirm Password</label>
+                    <input type="password" class="form-control" id="exampleInputPassword2" placeholder=" Re-type Password" name="password2">
+                </div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Select Your Category</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="category">
+                      <option value="patient">Patient</option>
+                      <option value="doctor">Doctor</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-success">Sign Up</button>
+            </form>
+        </div>
+        <div class="col-md-6 mt-4 pt-4">
+            <img src="{% static 'image/medical.svg' %}" alt="" class="img-fluid">
+        </div>
+    </div>
+</div>
+{% endblock %}
