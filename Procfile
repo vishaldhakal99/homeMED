@@ -1,1 +1,1 @@
-web: gunicorn techblog.wsgi --log-file -
+web: gunicorn homeMED.wsgi --log-file -
