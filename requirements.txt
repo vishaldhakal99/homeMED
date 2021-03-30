@@ -6,7 +6,7 @@ chardet==3.0.4
 click==7.1.2
 cycler==0.10.0
 distlib==0.3.0
-Django==3.0.7
+Django==3.0.12
 django-braces==1.14.0
 django-contrib-comments==1.9.2
 django-crispy-forms==1.9.0
